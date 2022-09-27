@@ -10,29 +10,32 @@ export class AppComponent {
 
   pry:any;
   prys:any;
-  constructor(http:HttpClient){
-    http.get('http://api.aladhan.com/v1/timingsByCity?city=Riyadh&country=Saudi%20Arabia%20&method=8')
-    .subscribe( Response => {
-      this.pry = Response;
-       
-      // }
+  constructor( private HttpClient:HttpClient){
+  this.pry={};
+  this.prys={};
+  }
+  
+  ngOnInit(): void {
+    this.getprytime();
+    this.getprytimes()
+  }
      
-    })
-    http.get(' http://api.aladhan.com/v1/timingsByCity?city=Makkah&country=Saudi%20Arabia%20&method=8')
-    .subscribe( Response => {
-      this.prys = Response;
-       
-      // }
-     
-    })
 
-   
-
-
-    
+  getprytimes(){
+    this.HttpClient.get('http://api.aladhan.com/v1/timingsByCity?city=Makkah&country=Saudi%20Arabia%20&method=8').subscribe(
+      (res:any)=>{
+      this.prys =res;
+      }
+    )
   }
 
-
+getprytime(){
+  this.HttpClient.get('http://api.aladhan.com/v1/timingsByCity?city=Riyadh&country=Saudi%20Arabia%20&method=8').subscribe(
+    (res:any)=>{
+    this.pry =res;
+    }
+  )
+}
 
 
 

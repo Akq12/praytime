@@ -1,155 +1,158 @@
 
-<form  class="relative  bg-no-repeat bg-cover" style="
+<div  class="relative min-h-full w-full overflow-hidden  bg-no-repeat bg-cover" style="
 background-position: 100%;
 background-image: url('https://images.pexels.com/photos/460680/pexels-photo-460680.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
-height: 70rem;">
+height: 1000px;">
+  <div class="mx-auto max-w-7xl py-6 px-4 sm:px-6 lg:px-8">
+    <h1 class="text-3xl font-bold tracking-tight text-gray-900">
+      <h1 class="pt-12 pb-4 txet-2xl bg-white bg-opacity-20 backdrop-blur-lg  drop-shadow-lg text-amber-700 flex justify-center ">
+        مواقيت الصلوات 
+      </h1>
+    </h1>
+  </div>
 
-
-  <h1 class="pt-12 pb-4 txet-2xl bg-white bg-opacity-20 backdrop-blur-lg  drop-shadow-lg text-amber-700 flex justify-center ">
-    مواقيت الصلوات 
-  </h1>
-  <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-non  pb-20">
-    <div class="flex justify-center items-center gap-4 p-40">
-      <div class="w-full h-full p-20 rounded-lg bg-white bg-opacity-20 backdrop-blur-lg  drop-shadow-lg">
-        <h1 class=" pt-4 font-Poppins text-amber-700  text-center"> اوقات الصلاة في مدينة الرياض </h1>
-        <!-- <h3 dir="ltr" class="  font-Poppins text-slate-800  text-center">
-           {{pry.data.date.hijri.date}} 
-        </h3> -->
-        <h3 dir="rtl" class="  font-Poppins text-slate-800  text-center">
-          {{pry.data.date.hijri.year}}  -{{pry.data.date.hijri.month.ar}}-{{pry.data.date.hijri.day}} 
-        </h3>
-        <h3 class="font-Poppins text-slate-800 text-center">
-           {{pry.data.date.readable}}  
-        </h3>
-        <h3 class="font-Poppins text-slate-800 text-center">
-          {{pry.data.meta.method.params.Isha}}
-        </h3>
-      <div class=" text-center grid grid-cols-3 gap-2 text-white  md:px-4" >
-        <div class="hover:opacity-40 hover:bg-slate-700 rounded-lg text-white w-full h-full transition duration-300 ease-in-out ">
-          <h2 class=" pt-4 font-Reem">الأمساك 
-          </h2>
-          <p class=" pb-4 font-Reem">{{pry.data.timings.Imsak}}</p>
-        </div>
-        <div class="hover:opacity-40 hover:bg-amber-600 rounded-lg text-white w-full h-full transition duration-300 ease-in-out ">
-          <h2 class=" pt-4 font-Reem">الفجر 
-            <mat-icon>wb_sunny</mat-icon>
-          </h2>
-          <p class=" pb-4 font-Reem">{{pry.data.timings.Fajr}}</p>
-        </div>
-        <div class="hover:opacity-40 hover:bg-slate-700 rounded-lg text-white w-full h-full transition duration-300 ease-in-out ">
-          <h2 class=" pt-4 font-Reem">الشروق 
-          </h2>
-          <p class=" pb-4 font-Reem">{{pry.data.timings.Sunrise}}</p>
-        </div>
-        <div class="hover:opacity-40 hover:bg-amber-600  rounded-lg text-white w-full h-full transition duration-300 ease-in-out ">
-          <h2 class=" pt-4 font-Reem">الظهر  </h2>
-          <p class=" pb-4 font-Reem">{{pry.data.timings.Dhuhr}}</p>
-        </div>
-        <div class="hover:opacity-40 hover:bg-amber-600  rounded-lg text-white w-full h-full transition duration-300 ease-in-out ">
-          <h2 class=" pt-4 font-Reem">العصر 
-            <mat-icon>filter_drama</mat-icon>
-          </h2>
-          <p class=" pb-4 font-Reem">{{pry.data.timings.Asr}}</p>
-        </div>
-        <div class="hover:opacity-40 hover:bg-slate-700 rounded-lg text-white w-full h-full transition duration-300 ease-in-out ">
-          <h2 class=" pt-4 font-Reem">الغروب 
-          </h2>
-          <p class=" pb-4 font-Reem">{{pry.data.timings.Sunset}}</p>
-        </div>
-        <div class="hover:opacity-40 hover:bg-amber-600  rounded-lg text-white w-full h-full transition duration-300 ease-in-out ">
-          <h2 class=" pt-4 font-Reem">المغرب 
-          </h2>
-          <p class=" pb-4 font-Reem">{{pry.data.timings.Maghrib}}</p>
-        </div>
-        <div class="hover:opacity-40 hover:bg-amber-600  rounded-lg text-white w-full h-full transition duration-300 ease-in-out ">
-          <h2 class=" pt-4 font-Reem">العشاء 
-            <mat-icon>nights_stay</mat-icon>
-          </h2>
-          <p class=" pb-4 font-Reem">{{pry.data.timings.Isha}}</p>
-        </div>
-        
-        <div class="hover:opacity-40 hover:bg-slate-700 rounded-lg text-white w-full h-full transition duration-300 ease-in-out ">
-          <h2 class=" pt-4 font-Reem">منتصف الليل  </h2>
-          <p class=" pb-4 font-Reem">{{pry.data.timings.Midnight}}</p>
-        </div>
-       
-        
-   
-      </div>
-    </div> 
-    <div class="w-full h-full p-20 rounded-lg bg-white bg-opacity-20 backdrop-blur-lg m-4 drop-shadow-lg">
-      <h1 class=" pt-4 font-Poppins text-amber-700  text-center"> 
+<main>
+  <div class="mx-auto max-w-7xl py-6 sm:px-4 lg:px-8 ">
     
-        اوقات الصلاة في مدينة مكة المكرمة </h1>
-      <!-- <h3 dir="ltr" class="  font-Poppins text-slate-800  text-center">
-         {{prys.data.date.hijri.date}} 
-      </h3> -->
-      <h3 dir="rtl" class="  font-Poppins text-slate-800  text-center">
-        {{pry.data.date.hijri.year}}  -{{pry.data.date.hijri.month.ar}}-{{pry.data.date.hijri.day}} 
-      </h3>
-      <h3 class="font-Poppins text-slate-800 text-center">
-         {{prys.data.date.readable}}  
-      </h3>
-      <h3 class="font-Poppins text-slate-800 text-center">
-        {{prys.data.meta.method.params.Isha}}
-      </h3>
-    <div class=" text-center grid grid-cols-3 gap-2 text-white  md:px-4" >
-      <div class="hover:opacity-40 hover:bg-slate-700 rounded-lg text-white w-full h-full transition duration-300 ease-in-out ">
-        <h2 class=" pt-4 font-Reem">الأمساك </h2>
-        <p class=" pb-4 font-Reem">{{prys.data.timings.Imsak}}</p>
-      </div>
-      <div class="hover:opacity-40 hover:bg-amber-600 rounded-lg text-white w-full h-full transition duration-300 ease-in-out ">
-        <h2 class=" pt-4 font-Reem">الفجر 
-          <mat-icon>wb_sunny</mat-icon>
-        </h2>
-        <p class=" pb-4 font-Reem">{{prys.data.timings.Fajr}}</p>
-      </div>
-      <div class="hover:opacity-40 hover:bg-slate-700 rounded-lg text-white w-full h-full transition duration-300 ease-in-out ">
-        <h2 class=" pt-4 font-Reem">
-          الشروق
-        </h2>
-        <p class=" pb-4 font-Reem">{{prys.data.timings.Sunrise}}</p>
-      </div>
-      <div class="hover:opacity-40 hover:bg-amber-600  rounded-lg text-white w-full h-full transition duration-300 ease-in-out ">
-        <h2 class=" pt-4 font-Reem">الظهر  </h2>
-        <p class=" pb-4 font-Reem">{{prys.data.timings.Dhuhr}}</p>
-      </div>
-      <div class="hover:opacity-40 hover:bg-amber-600  rounded-lg text-white w-full h-full transition duration-300 ease-in-out ">
-        <h2 class=" pt-4 font-Reem">العصر 
-          <mat-icon>filter_drama</mat-icon>
-        </h2>
-        <p class=" pb-4 font-Reem">{{prys.data.timings.Asr}}</p>
-      </div>
-      <div class="hover:opacity-40 hover:bg-slate-700 rounded-lg text-white w-full h-full transition duration-300 ease-in-out ">
-        <h2 class=" pt-4 font-Reem">
-         
-          الغروب 
-        </h2>
-        <p class=" pb-4 font-Reem">{{prys.data.timings.Sunset}}</p>
-      </div>
-      <div class="hover:opacity-40 hover:bg-amber-600  rounded-lg text-white w-full h-full transition duration-300 ease-in-out ">
-        <h2 class=" pt-4 font-Reem">المغرب </h2>
-        <p class=" pb-4 font-Reem">{{prys.data.timings.Maghrib}}</p>
-      </div>
-      <div class="hover:opacity-40 hover:bg-amber-600  rounded-lg text-white w-full h-full transition duration-300 ease-in-out ">
-        <h2 class=" pt-4 font-Reem">العشاء 
-          <mat-icon>nights_stay</mat-icon>
-        </h2>
-        
-        <p class=" pb-4 font-Reem">{{prys.data.timings.Isha}}</p>
-      </div>
+    <div class="px-4 py-6 sm:px-2">
+      <div class="rounded-lg grid grid-cols-2 container gap-4 p-4 border-gray-200">
+          <div class=" p-20 rounded-lg bg-white bg-opacity-20 backdrop-blur-lg  drop-shadow-lg" >
+            <h1 class=" pt-4 font-Poppins text-amber-700  text-center"> اوقات الصلاة في مدينة الرياض </h1>
       
-      <div class="hover:opacity-40 hover:bg-slate-700 rounded-lg text-white w-full h-full transition duration-300 ease-in-out ">
-        <h2 class=" pt-4 font-Reem">منتصف الليل  </h2>
-        <p class=" pb-4 font-Reem">{{prys.data.timings.Midnight}}</p>
-      </div>
-     
+            <h3 dir="rtl" class="  font-Poppins text-slate-800  text-center">
+              {{pry.data?.date?.hijri.year}}  -{{pry.data?.date?.hijri.month.ar}}-{{pry.data?.date?.hijri.day}} 
+            </h3>
+            <h3 class="font-Poppins text-slate-800 text-center">
+              {{pry.data?.date.readable}}  
+            </h3>
+            <h3 class="font-Poppins text-slate-800 text-center">
+              {{pry.data?.meta.method.params.Isha}}
+            </h3>
+          <div class=" text-center grid grid-cols-3 gap-2 text-white  md:px-4" >
+            <div class="hover:opacity-70 lg:m-2 hover:bg-slate-700 rounded-lg text-white w-full h-full transition duration-300 ease-in-out ">
+              <h2 class=" pt-4 font-Reem">الأمساك 
+              </h2>
+              <p class=" pb-4 font-Reem">{{pry.data?.timings.Imsak}}</p>
+            </div>
+            <div class="hover:opacity-70 hover:bg-amber-600 rounded-lg text-white w-full h-full transition duration-300 ease-in-out ">
+              <h2 class=" pt-4 font-Reem">الفجر 
+                <mat-icon>wb_sunny</mat-icon>
+              </h2>
+              <p class=" pb-4 font-Reem">{{pry.data?.timings.Fajr}}</p>
+            </div>
+            <div class="hover:opacity-70 hover:bg-slate-700 rounded-lg text-white w-full h-full transition duration-300 ease-in-out ">
+              <h2 class=" pt-4 font-Reem">الشروق 
+              </h2>
+              <p class=" pb-4 font-Reem">{{pry.data?.timings.Sunrise}}</p>
+            </div>
+            <div class="hover:opacity-70 hover:bg-amber-600  rounded-lg text-white w-full h-full transition duration-300 ease-in-out ">
+              <h2 class=" pt-4 font-Reem">الظهر  </h2>
+              <p class=" pb-4 font-Reem">{{pry.data?.timings.Dhuhr}}</p>
+            </div>
+            <div class="hover:opacity-70 hover:bg-amber-600  rounded-lg text-white w-full h-full transition duration-300 ease-in-out ">
+              <h2 class=" pt-4 font-Reem">العصر 
+                <mat-icon>filter_drama</mat-icon>
+              </h2>
+              <p class=" pb-4 font-Reem">{{pry.data?.timings.Asr}}</p>
+            </div>
+            <div class="hover:opacity-70 hover:bg-slate-700 rounded-lg text-white w-full h-full transition duration-300 ease-in-out ">
+              <h2 class=" pt-4 font-Reem">الغروب 
+              </h2>
+              <p class=" pb-4 font-Reem">{{pry.data?.timings.Sunset}}</p>
+            </div>
+            <div class="hover:opacity-70 hover:bg-amber-600  rounded-lg text-white w-full h-full transition duration-300 ease-in-out ">
+              <h2 class=" pt-4 font-Reem">المغرب 
+              </h2>
+              <p class=" pb-4 font-Reem">{{pry.data?.timings.Maghrib}}</p>
+            </div>
+            <div class="hover:opacity-70 hover:bg-amber-600  rounded-lg text-white w-full h-full transition duration-300 ease-in-out ">
+              <h2 class=" pt-4 font-Reem">العشاء 
+                <mat-icon>nights_stay</mat-icon>
+              </h2>
+              <p class=" pb-4 font-Reem">{{pry.data?.timings.Isha}}</p>
+            </div>
+            
+            <div class="hover:opacity-70 hover:bg-slate-700 rounded-lg text-white w-full h-full transition duration-300 ease-in-out ">
+              <h2 class=" pt-4 font-Reem">منتصف الليل  </h2>
+              <p class=" pb-4 font-Reem">{{pry.data?.timings.Midnight}}</p>
+            </div>
+          
+            
       
- 
+          </div>
+          </div> 
+      
+          <div class=" p-20 rounded-lg bg-white bg-opacity-20 backdrop-blur-lg  drop-shadow-lg">
+            <h1 class=" pt-4 font-Poppins text-amber-700  text-center"> 
+          
+              اوقات الصلاة في مدينة مكة المكرمة </h1>
+            <h3 dir="rtl" class="  font-Poppins text-slate-800  text-center">
+              {{prys.data?.date.hijri.year}}  -{{prys.data?.date.hijri.month.ar}}-{{prys.data?.date.hijri.day}} 
+            </h3>
+            <h3 class="font-Poppins text-slate-800 text-center">
+              {{prys.data?.date.readable}}  
+            </h3>
+            <h3 class="font-Poppins text-slate-800 text-center">
+              {{prys.data?.meta.method.params.Isha}}
+            </h3>
+          <div class=" text-center grid grid-cols-3 gap-2 text-white  md:px-4" >
+            <div class="hover:opacity-70 hover:bg-slate-700 rounded-lg text-white w-full h-full transition duration-300 ease-in-out ">
+              <h2 class=" pt-4 font-Reem">الأمساك </h2>
+              <p class=" pb-4 font-Reem">{{prys.data?.timings.Imsak}}</p>
+            </div>
+            <div class="hover:opacity-70 hover:bg-amber-600 rounded-lg text-white w-full h-full transition duration-300 ease-in-out ">
+              <h2 class=" pt-4 font-Reem">الفجر 
+                <mat-icon>wb_sunny</mat-icon>
+              </h2>
+              <p class=" pb-4 font-Reem">{{prys.data?.timings.Fajr}}</p>
+            </div>
+            <div class="hover:opacity-70 hover:bg-slate-700 rounded-lg text-white w-full h-full transition duration-300 ease-in-out ">
+              <h2 class=" pt-4 font-Reem">
+                الشروق
+              </h2>
+              <p class=" pb-4 font-Reem">{{prys.data?.timings.Sunrise}}</p>
+            </div>
+            <div class="hover:opacity-70 hover:bg-amber-600  rounded-lg text-white w-full h-full transition duration-300 ease-in-out ">
+              <h2 class=" pt-4 font-Reem">الظهر  </h2>
+              <p class=" pb-4 font-Reem">{{prys.data?.timings.Dhuhr}}</p>
+            </div>
+            <div class="hover:opacity-70 hover:bg-amber-600  rounded-lg text-white w-full h-full transition duration-300 ease-in-out ">
+              <h2 class=" pt-4 font-Reem">العصر 
+                <mat-icon>filter_drama</mat-icon>
+              </h2>
+              <p class=" pb-4 font-Reem">{{prys.data?.timings.Asr}}</p>
+            </div>
+            <div class="hover:opacity-70 hover:bg-slate-700 rounded-lg text-white w-full h-full transition duration-300 ease-in-out ">
+              <h2 class=" pt-4 font-Reem">
+              
+                الغروب 
+              </h2>
+              <p class=" pb-4 font-Reem">{{prys.data?.timings.Sunset}}</p>
+            </div>
+            <div class="hover:opacity-70 hover:bg-amber-600  rounded-lg text-white w-full h-full transition duration-300 ease-in-out ">
+              <h2 class=" pt-4 font-Reem">المغرب </h2>
+              <p class=" pb-4 font-Reem">{{prys.data?.timings.Maghrib}}</p>
+            </div>
+            <div class="hover:opacity-70 hover:bg-amber-600  rounded-lg text-white w-full h-full transition duration-300 ease-in-out ">
+              <h2 class=" pt-4 font-Reem">العشاء 
+                <mat-icon>nights_stay</mat-icon>
+              </h2>
+              
+              <p class=" pb-4 font-Reem">{{prys.data?.timings.Isha}}</p>
+            </div>
+            
+            <div class="hover:opacity-70 hover:bg-slate-700 rounded-lg text-white w-full h-full transition duration-300 ease-in-out ">
+              <h2 class=" pt-4 font-Reem">منتصف الليل  </h2>
+              <p class=" pb-4 font-Reem">{{prys.data?.timings.Midnight}}</p>
+            </div>
+          
+            
+      
+          </div>
+          </div>
+      </div>
     </div>
   </div>
-    </div>
-  </div>
-
-</form>
+</main>
+</div>
 

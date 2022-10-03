@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { TimeOfPray } from '../interface/time';
 
@@ -12,21 +12,16 @@ import { TimeOfPray } from '../interface/time';
 export class PrayService {
 
   constructor(private http: HttpClient) { }
-
-
-getPray():Observable<TimeOfPray>{
-  return this.http.get<TimeOfPray>('https://api.aladhan.com/v1/timingsByAddress/28-09-2022?address=Riyadh,SaudiArabia&method=8');
+getPray( citys:any):Observable<TimeOfPray>{
+    const url = 'https://api.aladhan.com/v1/timingsByCity?country=sa';
+  let params = {
+    city:citys   ///"jeddah" 
+  };
+  let queryParams = new HttpParams({ fromObject: params });
+  return this.http.get<TimeOfPray>(url,{params:queryParams});
+  
 }
 
-getPrays():Observable<TimeOfPray>{
-  return this.http.get<TimeOfPray>('https://api.aladhan.com/v1/timingsByAddress/28-09-2022?address=Makkah,SaudiArabia&method=8');
-}
 
-getPrayj():Observable<TimeOfPray>{
-  return this.http.get<TimeOfPray>('https://api.aladhan.com/v1/timingsByAddress/28-09-2022?address=Jeddah,SaudiArabia&method=8');
-}
-getPraya():Observable<TimeOfPray>{
-  return this.http.get<TimeOfPray>('https://api.aladhan.com/v1/timingsByAddress/28-09-2022?address=Abha,SaudiArabia&method=8');
-}
 
 }

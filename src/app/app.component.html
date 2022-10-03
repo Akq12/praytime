@@ -3,84 +3,78 @@
 
   background-image: url('https://images.pexels.com/photos/460680/pexels-photo-460680.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
  
-">
-<div class=" justify-self-stretch items-center ">
-    <h1 class="py-8 txet-2xl bg-white bg-opacity-20 backdrop-blur-lg  drop-shadow-lg text-amber-700 flex justify-center ">
-      مواقيت الصلوات 
-      <!-- <div class="justify-center items-center w-1/2 px-40">
-        <div class="mb-3 xl:w-96">
-          <div class="input-group relative grid grid-cols-2 items-stretch w-full mb-4">
-            <input [(ngModel)]="term" type="search" class="form-control relative flex-auto min-w-0 block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-opacity-30 border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-amber-700 focus:outline-none" placeholder="Search" aria-label="Search" aria-describedby="button-addon3">
-            <button class="btn w-1/2 inline-block px-2 py-2 border-2 border-amber-700 text-amber-700 font-medium text-xs leading-tight uppercase rounded hover:bg-slate-700 hover:bg-opacity-50 focus:outline-none focus:ring-0 transition duration-150 ease-in-out" type="button" id="button-addon3">Search</button>
-          </div>
-        </div>
-      </div> -->
-    
+"  >
+<div class="p-8 flex  flex-col  items-center  bg-white bg-opacity-20 backdrop-blur-lg  drop-shadow-lg" >
+    <h1 class=" txet-2xl text-amber-700 justify-center ">
+      مواقيت الصلوات
     </h1>
+   <p class="pt-4 text-center px-4">فَإِذَا قَضَيْتُمُ الصَّلَاةَ فَاذْكُرُوا اللَّهَ قِيَامًا وَقُعُودًا وَعَلَىٰ جُنُوبِكُمْ ۚ فَإِذَا اطْمَأْنَنتُمْ فَأَقِيمُوا الصَّلَاةَ ۚ إِنَّ الصَّلَاةَ كَانَتْ عَلَى الْمُؤْمِنِينَ كِتَابًا مَّوْقُوتًا </p>
+   <p class="text-amber-700 text-xs">سورة النساء آية رقم (103)  </p>
     
 </div>
   <div class="justify-self-stretch items-center " >
     <div class="p-12 flex justify-center gap-4 items-center w-full h-full">
-      <div class="w-full py-4 h-full rounded-lg bg-white bg-opacity-20 backdrop-blur-lg  drop-shadow-lg">
-        <div class="p-4"> 
-          <h1 class=" font-Poppins text-amber-700  text-center"> اوقات الصلاة في مدينة الرياض </h1>
-         
-          <h3 dir="rtl" class="  font-Poppins text-slate-800  text-center">
-            {{pry.data?.date?.hijri.year}}  -{{pry.data?.date?.hijri.month.ar}}-{{pry.data?.date?.hijri.day}} 
+      <div class="w-full max-w-900px max-h-900px py-4 h-full rounded-lg bg-white bg-opacity-20 backdrop-blur-lg  drop-shadow-lg">
+       
+        <div class="p-4 items-center flex flex-col focus"> 
+          <h1 id="h1" class=" font-Poppins text-amber-700  text-center"> اوقات الصلاة في مدينة </h1>
+            <select  (change)="ngmodelchange($event)" class="font-Poppins text-center p-4 m-4 bg-white bg-opacity-20 backdrop-blur-lg w-1/2  focus:ring-amber-700 focus:outline-none  text-sm leading-3 text-slate-900 rounded-md py-2  ">
+              <option *ngFor="let c of citis" [value]="c.name"class="font-Poppins text-amber-700  hover:opacity-70 hover:bg-amber-700">{{c.arabicName}}  </option>
+               </select>
+          <h3 id="h3" dir="rtl" class="font-Poppins text-slate-800 mb-0 text-center">
+            {{pry?.date?.hijri.weekday.ar }}   
           </h3>
-          <h3 class="font-Poppins text-slate-800 text-center">
-            {{pry.data?.date.readable}}  
+          <h3 dir="ltr" class="font-Poppins text-slate-800 text-center m-0">
+            {{pry?.date.readable}}  
           </h3>
-          <h3 class="font-Poppins text-slate-800 text-center">
-            {{pry.data?.meta.method.params.Isha}}
-          </h3></div>
+          </div>
         
-      <div class="text-center grid grid-cols-3 gap-4 text-white px-4 md:px-12">
-      <div class="hover:opacity-70 hover:bg-slate-700 rounded-lg active:bg-slate-700 focus:outline-double focus:ring focus:ring-slate-700 text-white transition duration-300 ease-in-out ">
-        <h2 class=" pt-4 font-Reem">الأمساك 
+      <div class="text-center grid grid-cols-3 gap-4 text-white px-4 md:px-12 ">
+      <div class="hover:opacity-70 hover:bg-slate-700 rounded-lg text-white transition duration-300 ease-in-out " onclick="">
+        <h2 class=" pt-4 font-Reem ">الأمساك 
         </h2>
-        <p class=" pb-4 font-Reem">{{pry.data?.timings.Imsak}}</p>
+        <p class=" pb-4 font-Reem">{{pry?.timings.Imsak}}</p>
       </div>
-      <div class="hover:opacity-70 hover:bg-amber-700 rounded-lg text-white transition duration-300 ease-in-out "> 
+      <div class="hover:opacity-70 hover:bg-amber-700 rounded-lg text-white transition duration-300 ease-in-out "onclick=""> 
         <h2 class=" pt-4 font-Reem">الفجر 
         <mat-icon>wb_sunny</mat-icon>
       </h2>
-      <p class=" pb-4 font-Reem">{{pry.data?.timings.Fajr}}</p>
+      <p class=" pb-4 font-Reem">{{pry?.timings.Fajr}}</p>
     </div>
-      <div class="hover:opacity-70 hover:bg-slate-700 rounded-lg text-white transition duration-300 ease-in-out "> 
+      <div class="hover:opacity-70 hover:bg-slate-700 rounded-lg text-white transition duration-300 ease-in-out  "onclick=""> 
         <h2 class=" pt-4 font-Reem">الشروق 
       </h2>
-      <p class=" pb-4 font-Reem">{{pry.data?.timings.Sunrise}}</p>
+      <p class=" pb-4 font-Reem">{{pry?.timings.Sunrise}}</p>
     </div>
-      <div class="hover:opacity-70 hover:bg-amber-700 rounded-lg text-white transition duration-300 ease-in-out ">
+      <div class="hover:opacity-70 hover:bg-amber-700 rounded-lg text-white  transition duration-300 ease-in-out "onclick="">
         <h2 class=" pt-4 font-Reem">الظهر  </h2>
-        <p class=" pb-4 font-Reem">{{pry.data?.timings.Dhuhr}}</p>
+        <p class=" pb-4 font-Reem">{{pry?.timings.Dhuhr}}</p>
       </div>
-      <div class="hover:opacity-70 hover:bg-amber-700 rounded-lg text-white transition duration-300 ease-in-out ">
+      <div class="hover:opacity-70 hover:bg-amber-700 rounded-lg text-white transition duration-300 ease-in-out "onclick="">
         <h2 class=" pt-4 font-Reem">العصر 
           <mat-icon>filter_drama</mat-icon>
         </h2>
-        <p class=" pb-4 font-Reem">{{pry.data?.timings.Asr}}</p>
+        <p class=" pb-4 font-Reem">{{pry?.timings.Asr}}</p>
       </div>
-      <div class="hover:opacity-70 hover:bg-slate-700 rounded-lg text-white transition duration-300 ease-in-out ">
+      <div class="hover:opacity-70 hover:bg-slate-700 rounded-lg text-white transition duration-300 ease-in-out "onclick=" ">
         <h2 class=" pt-4 font-Reem">الغروب 
       </h2>
-      <p class=" pb-4 font-Reem">{{pry.data?.timings.Sunset}}</p>
+      <p class=" pb-4 font-Reem">{{pry?.timings.Sunset}}</p>
     </div>
-      <div class="hover:opacity-70 hover:bg-amber-700 rounded-lg text-white transition duration-300 ease-in-out ">
+      <div class="hover:opacity-70 hover:bg-amber-700 rounded-lg text-white transition duration-300 ease-in-out "onclick=" ">
         <h2 class=" pt-4 font-Reem">المغرب 
         </h2>
-        <p class=" pb-4 font-Reem">{{pry.data?.timings.Maghrib}}</p>
+        <p class=" pb-4 font-Reem">{{pry?.timings.Maghrib}}</p>
       </div>
-      <div class="hover:opacity-70 hover:bg-amber-700 rounded-lg text-white transition duration-300 ease-in-out ">
+      <div class="hover:opacity-70 hover:bg-amber-700 rounded-lg text-white transition duration-300 ease-in-out "onclick=" ">
         <h2 class=" pt-4 font-Reem">العشاء 
           <mat-icon>nights_stay</mat-icon>
         </h2>
-        <p class=" pb-4 font-Reem">{{pry.data?.timings.Isha}}</p>
+        <p class=" pb-4 font-Reem">{{pry?.timings.Isha}}</p>
       </div>
-      <div class="hover:opacity-70 hover:bg-slate-700 rounded-lg text-white transition duration-300 ease-in-out ">
+      <div class="hover:opacity-70 hover:bg-slate-700 rounded-lg text-white transition duration-300 ease-in-out "onclick=" ">
         <h2 class=" pt-4 font-Reem">منتصف الليل  </h2>
-        <p class=" pb-4 font-Reem">{{pry.data?.timings.Midnight}}</p>
+        <p class=" pb-4 font-Reem">{{pry?.timings.Midnight}}</p>
       </div>
       </div>
     
@@ -88,7 +82,7 @@
     </div>
    
     </div>
-    <div class="p-12 flex justify-center gap-4 items-center w-full h-full">
+    <!-- <div class="p-12 flex justify-center gap-4 items-center w-full h-full">
        <div class="w-full h-full py-4 rounded-lg bg-white bg-opacity-20 backdrop-blur-lg  drop-shadow-lg">
       <div class="p-4"> 
         <h1 class=" font-Poppins text-amber-700  text-center"> اوقات الصلاة في مدينة مكة المكرمة </h1>
@@ -288,6 +282,6 @@
  
    
  </div>
-   </div>
+   </div> -->
   </div>
 </div>

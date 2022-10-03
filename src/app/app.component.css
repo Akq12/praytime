@@ -1,0 +1,13 @@
+h3{
+    margin: 0%;
+    font-size:large;
+    font-family:'Courier New', Courier, monospace;
+}
+h1{
+    margin: 0%;
+    font-size:x-large;
+    font-family:'Courier New', Courier, monospace;
+}
+.select {
+   background-color: none;
+  }

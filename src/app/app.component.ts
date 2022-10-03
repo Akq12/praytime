@@ -1,10 +1,10 @@
 
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import axios from 'axios';
+import { __values } from 'tslib';
 import { PrayService } from './service/pray.service';
-interface TimeOfPrays {
-  name: string;
-}
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -12,69 +12,62 @@ interface TimeOfPrays {
 })
 
 export class AppComponent {
-  searchTerm = '';
-  countries: TimeOfPrays[] = [];
-  term = '';
-  pry:any;
-  pryj:any;
-  prys:any;
-  prya:any;
   
-
   constructor(private praysService:PrayService){
- 
+    }
+
+  playsound(){
+    let audio = new Audio();
+    audio.src ='https://cdn.islamic.network/quran/audio-surah/128/ar.ahmedalajmi/94.mp3';    // ar.saudalshuraim  ar.khaledalqahtani  ar.abdulazizazzahrani https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/114.mp3
+    audio.load();
+    audio.play();
   }
-  
+  ngmodelchange(value: any){
+    let cityName = value.target.value ;
+   this.getList(cityName)
+  };
+
+ citis = [
+    {
+      arabicName:"مكةالمكرمة",
+      name:"Makkah al Mukarramah"
+  },
+  {
+    arabicName:" الرياض",
+    name:"Riyadh"
+}, {
+  arabicName:" ابها",
+  name:"Asīr"
+}, 
+{
+  arabicName:" جدة",
+  name:"jeddah"
+},
+{
+  arabicName:" الشرقية",
+  name:"Ash Sharqīyah"
+},
+]
+pry:any
+prys:any
+
+getList(name:string){
+
+    this.praysService.getPray(name)
+    .subscribe((res) => {  
+       this.prys = res
+       this.pry = this.prys.data
+
+        console.log(this.pry);
+    })
+} 
+
   ngOnInit(): void {
-    this.getprytime();
-    this.getprytimes();
-    this.getprytimeinjaddah();
-    this.getprytimeinabha();
-   
-    this.praysService.getPray()
-    .subscribe((data:any) => {
-      this.countries = data;
-      console.log(this.countries)
-    });
-  }
-     
-  getprytimeinjaddah():void{
-    this.praysService.getPrayj().subscribe(
-      (res:any)=>{
-            this.pryj =res;
-            console.log(this.pryj)
-      }
-      )
     
+    this.getList("Makkah al Mukarramah")
+    this.playsound();
   }
-
-
-  getprytimes():void{
-    this.praysService.getPray().subscribe(
-      (res:any)=>{
-            this.pry =res;
-            console.log(this.pry)
-      }
-      )
     
-  }
-
-getprytime(){
-  this.praysService.getPrays().subscribe(
-    (res:any)=>{
-    this.prys =res;
-    console.log(this.prys)
-    }
-  )
-}
-getprytimeinabha(){
-  this.praysService.getPraya().subscribe(
-    (res:any)=>{
-    this.prya =res;
-    console.log(this.prya)
-    }
-  )
-}
 }
 
 

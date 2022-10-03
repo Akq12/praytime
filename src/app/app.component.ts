@@ -58,7 +58,7 @@ getList(name:string){
        this.prys = res
        this.pry = this.prys.data
 
-        console.log(this.pry);
+        // console.log(this.pry);
     })
 } 
 
